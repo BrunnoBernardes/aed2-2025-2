@@ -1,0 +1,9 @@
+# VSCode
+.vscode/
+
+# C / builds
+*.o
+*.obj
+*.exe
+*.out
+*.log
