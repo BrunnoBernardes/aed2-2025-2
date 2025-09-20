@@ -1,6 +1,7 @@
 {
   "version": "0.2.0",
   "configurations": [
+    
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
@@ -8,8 +9,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/brunn/Codes/Git/aed2-2025-2/aed2-aulas",
-      "program": "c:/Users/brunn/Codes/Git/aed2-2025-2/aed2-aulas/build/Debug/outDebug",
+      "cwd": "d:/Files/Codes/Git/aed2-2025-2/aed2-listas/Lista_05_codigoAlterado",
+      "program": "d:/Files/Codes/Git/aed2-2025-2/aed2-listas/Lista_05_codigoAlterado/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

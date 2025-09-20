@@ -1,0 +1,19 @@
+/*
+* Código retirado e adaptado de: BACKES, André Ricardo. Algoritmos e Estruturas de Dados em C. Rio de Janeiro: LTC, 2023. 
+*/
+
+typedef struct NO* ArvBin;
+
+ArvBin* cria_ArvBin();
+void libera_ArvBin(ArvBin *raiz);
+int insere_ArvBin(ArvBin* raiz, int valor);
+int insere_ArvBin_rec(ArvBin *raiz, int valor);
+int remove_ArvBin_rec(ArvBin *raiz, int valor);
+int remove_ArvBin_iter(ArvBin *raiz, int valor);
+int estaVazia_ArvBin(ArvBin *raiz);
+int altura_ArvBin(ArvBin *raiz);
+int totalNO_ArvBin(ArvBin *raiz);
+int consulta_ArvBin(ArvBin *raiz, int valor);
+void preOrdem_ArvBin(ArvBin *raiz);
+void emOrdem_ArvBin(ArvBin *raiz);
+void posOrdem_ArvBin(ArvBin *raiz);
