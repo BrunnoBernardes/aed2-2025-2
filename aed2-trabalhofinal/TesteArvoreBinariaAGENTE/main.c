@@ -1,33 +1,27 @@
 #include <stdio.h>
-#include "arvore.h"
-
-static void printa(int x) {
-    printf("%d ", x);
-}
+#include "max_heap.h"
 
 int main(void) {
-    Arvore *a = arvore_criar();
-    if (!a) {
-        printf("Erro ao criar arvore\n");
+    MaxHeap *h = max_heap_criar(10);
+    if (!h) {
+        printf("Erro ao criar heap\n");
         return 1;
     }
 
-    arvore_inserir(a, 8);
-    arvore_inserir(a, 3);
-    arvore_inserir(a, 10);
-    arvore_inserir(a, 1);
-    arvore_inserir(a, 6);
+    max_heap_inserir(h, 8);
+    max_heap_inserir(h, 3);
+    max_heap_inserir(h, 10);
+    max_heap_inserir(h, 1);
+    max_heap_inserir(h, 6);
 
-    printf("Busca 6: %s\n", arvore_buscar(a, 6) ? "sim" : "nao");
-    printf("In-ordem: ");
-    arvore_em_ordem(a, printa);
-    printf("\n");
+    printf("Heap: ");
+    max_heap_imprimir(h);
 
-    arvore_remover(a, 3);
-    printf("Depois de remover 3 (in-ordem): ");
-    arvore_em_ordem(a, printa);
-    printf("\n");
-
-    arvore_destruir(a);
+    int chave_removida;
+    max_heap_remover(h, &chave_removida);
+    printf("Depois de remover o maximo (%d): ", chave_removida);
+    max_heap_imprimir(h);
+    
+    max_heap_destruir(h);
     return 0;
 }
